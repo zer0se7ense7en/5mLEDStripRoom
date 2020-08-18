@@ -27,6 +27,13 @@ void setup() {
 
 void fadeall() { for(int i = 0; i < NUM_LEDS; i++) { leds[i].nscale8(250); } }
 
+void SingleColor(int color) {
+  for(int i = 0; i < NUM_LEDS; i++) {
+    leds[i].setHue(color);
+  }
+  FastLED.delay(100);
+}
+
 void RainbowCylon() { 
   static uint8_t hue = 0;
   Serial.print("x");
@@ -274,11 +281,12 @@ void createset(int par) {
 }
 
 void loop() {
+  SingleColor(123);
   //AlternatingBrightness();
   //FastLED.clear();
   //FastLED.show();
   //RainbowCylon();
-  FullRainbow(250);
+  //FullRainbow(250);
   //Cylon(120);
   //DoubleRainbowCylon();
   //DoubleCylon(50);
@@ -287,3 +295,4 @@ void loop() {
   //createset(2);
   //ServerBlinking();
 }
+
