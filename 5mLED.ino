@@ -251,6 +251,12 @@ void ServerBlinking() {
     FastLED.delay(delaytime);
   }
   FastLED.delay(random16(500,5000));
+  
+  /*int wuerfel = random(6,6);
+  if(wuerfel == 6) {
+    createset(1);
+    createset(2);
+  }*/
 
 }
 
@@ -272,12 +278,12 @@ void loop() {
   //FastLED.clear();
   //FastLED.show();
   //RainbowCylon();
-  //FullRainbow(50);
+  FullRainbow(250);
   //Cylon(120);
   //DoubleRainbowCylon();
   //DoubleCylon(50);
   //Rumbler(0);
   //createset(1);
   //createset(2);
-  ServerBlinking();
+  //ServerBlinking();
 }
